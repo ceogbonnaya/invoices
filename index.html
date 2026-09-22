@@ -140,9 +140,9 @@
   <form class="card editor no-print" id="form" autocomplete="off">
     <h2>Your business (From)</h2>
     <label>Business / your name</label>
-    <input id="fromName" value="Chukwuemeka Ogbonnaya">
+    <input id="fromName" value="" placeholder="Your name / business name">
     <div class="row">
-      <div><label>Email</label><input id="fromEmail" value="ceogbonnaya@gmail.com"></div>
+      <div><label>Email</label><input id="fromEmail" value="" placeholder="you@email.com"></div>
       <div><label>Phone (optional)</label><input id="fromPhone" placeholder="+234 ..."></div>
     </div>
     <label>Address (optional)</label>
@@ -195,7 +195,7 @@
     <div class="hint">Different per invoice — paste the shareable link for this one. Leave blank to omit; a "Pay online" button appears on the invoice when filled.</div>
     <label style="margin-top:12px">Bank / payment info</label>
     <textarea id="payInfo" style="min-height:150px"></textarea>
-    <div class="hint">Pre-filled with your Raenest USD account. Edit anytime.</div>
+    <div class="hint">Enter your bank / payment details, then click 'Save my details' so they are remembered on this device.</div>
 
     <h2>Notes / terms</h2>
     <textarea id="notes" placeholder="Thank you for your business! Payment due within 14 days."></textarea>
@@ -270,14 +270,7 @@
 
 <script>
 (function(){
-  var DEFAULT_PAY =
-    "Pay via Raenest (USD)\n" +
-    "Account name: Chukwuemeka Ogbonnaya\n" +
-    "Bank name: Lead Bank\n" +
-    "Account number: 211845069095\n" +
-    "Account type: Checking\n" +
-    "Routing number: 101019644\n" +
-    "Bank address: 1801 Main St. Kansas City, MO 64108, USA";
+  var DEFAULT_PAY = "";  // Sanitized for public hosting - enter details once, then 'Save my details'.
 
   var SYM = {USD:"$",CAD:"CA$",GBP:"£",EUR:"€",NGN:"₦"};
   var logoData = "";
